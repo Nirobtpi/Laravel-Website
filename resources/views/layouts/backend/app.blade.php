@@ -98,7 +98,7 @@
 
     <!-- Demo Js -->
     <script src="{{ asset('assets/backend/js/demo.js') }}"></script>
-            <script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
         {!! Toastr::message() !!}
     @stack('js')
 
