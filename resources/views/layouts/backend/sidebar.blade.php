@@ -31,6 +31,12 @@
                         <span>Dashboard</span>
                     </a>
                 </li>
+                <li class="{{ Request::is('admin/tag*') ? "active" : "" }}">
+                    <a href="{{ route('admin.tag.index') }}">
+                        <i class="material-icons">tag</i>
+                        <span>Tag</span>
+                    </a>
+                </li>
                 <li class="header">System</li>
                 <li>
                     <a href="{{ route('logout') }}">

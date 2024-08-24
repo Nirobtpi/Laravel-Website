@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\TagController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -26,6 +27,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::group(['as'=>'admin.','prefix'=>'admin','middleware'=>['auth','admin']], function(){
     
     Route::get('/dashboard',[DashboardController::class,'index'])->name('dashboard');
+    Route::resource('tag', TagController::class);
     
 
 
