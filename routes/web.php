@@ -26,6 +26,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::group(['as'=>'admin.','prefix'=>'admin','middleware'=>['auth','admin']], function(){
     
     Route::get('/dashboard',[DashboardController::class,'index'])->name('dashboard');
+    
 
 
 });
@@ -35,3 +36,4 @@ Route::group(['as'=>'author.','prefix'=>'author','middleware'=>['auth','author']
 
 
 });
+Route::get('/logout',[DashboardController::class,'logout']);

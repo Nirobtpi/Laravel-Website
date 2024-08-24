@@ -53,12 +53,9 @@
                   <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages <i class="ti-angle-down ml-1"></i>
                   </a>
                   <div class="dropdown-menu">
-                     <a class="dropdown-item" href="author.html">Author</a>
-                     <a class="dropdown-item" href="post-details-1.html">Post Details 1</a>
-                     <a class="dropdown-item" href="post-details-2.html">Post Details 2</a>
-                     <a class="dropdown-item" href="post-elements.html">Post Elements</a>
-                     <a class="dropdown-item" href="privacy-policy.html">Privacy Policy</a>
-                     <a class="dropdown-item" href="terms-conditions.html">Terms Conditions</a>
+                     <a class="dropdown-item" href="{{ route('login') }}">Login</a>
+                     <a class="dropdown-item" href="{{ route('register') }}">SIgn Up</a>
+                    
                   </div>
                </li>
             </ul>
