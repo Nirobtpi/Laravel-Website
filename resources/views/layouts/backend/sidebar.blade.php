@@ -43,6 +43,12 @@
                         <span>Category</span>
                     </a>
                 </li>
+                <li class="{{ Request::is('admin/post*') ? "active" : "" }}">
+                    <a href="{{ route('admin.post.index') }}">
+                        <i class="material-icons">apps</i>
+                        <span>Post</span>
+                    </a>
+                </li>
                 <li class="header">System</li>
                 <li>
                     <a href="{{ route('logout') }}">

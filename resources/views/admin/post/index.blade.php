@@ -1,6 +1,6 @@
 @extends('layouts.backend.app')
 
-@section('title','category')
+@section('title','Post')
 @push('css')
 <!-- JQuery DataTable Css -->
 <link href="{{ asset('assets/backend/plugins/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.css') }}"
@@ -10,8 +10,8 @@
 @section('content')
 <div class="container-fluid">
     <div class="block-header">
-        <a href="{{ route('admin.category.create') }}" class="btn btn-primary"><i class="material-icons">add</i><span>Add New
-                category</span></a>
+        <a href="{{ route('admin.post.create') }}" class="btn btn-primary"><i class="material-icons">add</i><span>Add New
+                Post</span></a>
     </div>
     <!-- Exportable Table -->
     <div class="row clearfix">
@@ -19,7 +19,7 @@
             <div class="card">
                 <div class="header">
                     <h2>
-                        All category
+                        All Post
                     </h2>
                 </div>
                 <div class="body">
@@ -37,28 +37,10 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($categories as $category)
                                 <tr>
-                                    <td>{{ $loop->index+1 }}</td>
-                                    <td>{{ $category->name }}</td>
-                                    {{-- <td>{!! $category->image ? '<img src="'.asset('storage/' . $category->image).'" alt="" style="width: 150px; height:150px">' : '' !!}</td> --}}
-                                    <td>{{ $category->created_at }}</td>
-                                    <td>{{ $category->updated_at }}</td>
-                                    <td><a class="btn btn-info" href="{{ route('admin.category.edit', $category->id) }}"><i
-                                                class="material-icons">edit</i></a></td>
-                                    <td>
-                                        <button type="button" onclick="deletecategory({{ $category->id }})"
-                                            class="btn btn-danger"><i class="material-icons">delete</i>
-                                        </button>
-
-                                        <form style="display: none" id='delete-form-{{ $category->id }}'
-                                            action="{{ route('admin.category.destroy', $category->id) }}" method="POST">
-                                            @csrf
-                                            @method('DELETE')
-                                        </form>
-                                    </td>
+                                    <td>name</td>
+                                  
                                 </tr>
-                                @endforeach
                             </tbody>
                         </table>
                     </div>
@@ -86,7 +68,7 @@
 <script src="{{ asset('assets/backend/js/pages/tables/jquery-datatable.js') }}"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-<script>
+{{-- <script>
     function deletecategory(id) {
     const swalWithBootstrapButtons = Swal.mixin({
         customClass: {
@@ -117,7 +99,7 @@
             });
         }
     });
-}
+} --}}
 
 
 </script>

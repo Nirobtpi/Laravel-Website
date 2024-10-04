@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\TagController;
 use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
@@ -30,6 +31,8 @@ Route::group(['as'=>'admin.','prefix'=>'admin','middleware'=>['auth','admin']], 
     Route::get('/dashboard',[DashboardController::class,'index'])->name('dashboard');
     Route::resource('tag', TagController::class);
     Route::resource('category', CategoryController::class);
+    Route::resource('post', PostController::class);
+   
     
 
 
